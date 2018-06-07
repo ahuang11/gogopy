@@ -1,2 +1,0 @@
-conda create --name py3 --channel conda-forge/label/dev python=3.6 xarray pynio
-source activate py3
