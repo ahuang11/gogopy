@@ -58,7 +58,7 @@ In destination add localhost:#### replacing #### with the port number you chose 
 
 BEFORE CLICKING OPEN, head back to the Session on th left, click your saved sesssion, and press Save so you don't have to repeat!
 
-Now in your browser input the URL that jupyter notebook --no-server --port=#### displayed and you have access!
+Now in your browser input the URL that jupyter notebook --no-browser --port=#### displayed and you have access!
 
 	Copy/paste this URL into your browser when you connect for the first time,
 	    to login with a token:
