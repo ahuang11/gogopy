@@ -1,7 +1,8 @@
 # gogopy
 Get started with Python
 
-### How to install Anaconda Python for Linux to your home directory (for Mac https://www.unidata.ucar.edu/blogs/developer/entry/metpy-mondays-1-conda-installation)
+### How to install Anaconda Python for Linux to your home directory
+![Video tutorial for Mac](https://github.com/ahuang11/gogopy/blob/master/putty_config.png)
 
 Download Anaconda Python 3.6 (if you need 2.7, still install 3.6) to your home directory
 
@@ -25,7 +26,7 @@ For those who need Python 2.7
 
 To activate the environment
 
-  source activate py2
+    source activate py2
 
 Install additional packages using pip or conda install
 
@@ -44,7 +45,7 @@ For your convenience, add a shortcut called "jupy" to your ~/.bash_profile to ac
     echo 'alias jupy=jupyter notebook --no-server --port=####' >> ~/.bash_profile
 
 
-![alt text](https://github.com/ahuang11/putty_config.png "Port Forwarding in Putty")
+![Port Forwarding in Putty](https://github.com/ahuang11/gogopy/blob/master/putty_config.png "Port Forwarding in Putty")
 
 1. If you use putty, before connecting to the session, on the left, follow these tabs
 
@@ -89,9 +90,10 @@ Now in your browser input the URL that jupyter notebook --no-browser --port=####
 - scikit-learn - machine learning for regression, classification, clustering
 - keras - high level deep learning API on top of `tensorflow` and `theano`
 - metpy - collection of tools for meteorology
+- xesmf - high level geospatial regridding and interpolation on top of `esmpy`
 
-### Demonstration topics
-See some of these packages demonstrated [here!]: https://github.com/ahuang11/random_examples.pdf
+#### Demonstration topics
+See some of these packages demonstrated [here!](https://github.com/ahuang11/gogopy/blob/master/random_examples.pdf)
 - Why not jet
 - Read csv
 - High level plotting
@@ -106,7 +108,7 @@ See some of these packages demonstrated [here!]: https://github.com/ahuang11/ran
 - Read shapefile
 - Geographical maps
 
-### `pip install` vs `conda install`
+#### `pip install` vs `conda install`
 - `pip install` runs much quicker than than `conda install`
 - `pip install` works best for standalone packages that do need to be compiled
 - `conda install` is useful with packages that require compiling (e.g. cartopy, gdal)
@@ -116,11 +118,6 @@ See some of these packages demonstrated [here!]: https://github.com/ahuang11/ran
 
 ### Additional Resources
 
-For those who need grib
-
-	conda create --name py3 --channel conda-forge/label/dev python=3.6 xarray pynio
-	source activate py3
-
 For a wonderfully written data science handbook
 
 https://jakevdp.github.io/PythonDataScienceHandbook/
@@ -128,3 +125,8 @@ https://jakevdp.github.io/PythonDataScienceHandbook/
 For standard Python styling guidelines
 
 https://www.python.org/dev/peps/pep-0008/
+
+For those who need grib
+
+    conda create --name py3 --channel conda-forge/label/dev python=3.6 xarray pynio
+    source activate py3
