@@ -22,7 +22,7 @@ Source (install) your ~/.bash_profile or ~/.bashrc
 For those who need Python 2.7
 
 	conda create -n py2 python=2.7
-  
+
 To activate the environment
 
   source activate py2
@@ -41,22 +41,32 @@ Change the port number between 7000 and 8000, and in a terminal input the follow
 
 For your convenience, add a shortcut called "jupy" to your ~/.bash_profile to activate
 
-	echo 'alias jupy=jupyter notebook --no-server --port=####' >> ~/.bash_profile
+    echo 'alias jupy=jupyter notebook --no-server --port=####' >> ~/.bash_profile
 
-(http://realprogrammers.com/how_to/set_up_an_ssh_tunnel_with_putty.html with pictures for the following steps)
-If you use putty, before connecting to the session, on the left, follow these tabs
+
+![alt text](https://github.com/ahuang11/putty_config.png "Port Forwarding in Putty")
+
+1. If you use putty, before connecting to the session, on the left, follow these tabs
 
 	Connection > SSH > Tunnels
 
-In source port replace #### with the port number you chose earlier between 7000 and 8000
+2. In source port replace #### with the port number you chose earlier between 7000 and 8000
 
 	####
 
-In destination add localhost:#### replacing #### with the port number you chose earlier
+3. In destination add localhost:#### replacing #### with the port number you chose earlier
 
 	localhost:####
 
-BEFORE CLICKING OPEN, head back to the Session on th left, click your saved sesssion, and press Save so you don't have to repeat!
+4. Click Add
+
+5. Now you should see it in the list
+
+    L####       localhost:####
+
+6. BEFORE CLICKING OPEN, head back to the Session on the left
+
+7. Click the corresponding saved sesssion, and press Save so you don't have to repeat!
 
 Now in your browser input the URL that jupyter notebook --no-browser --port=#### displayed and you have access!
 
@@ -64,10 +74,57 @@ Now in your browser input the URL that jupyter notebook --no-browser --port=####
 	    to login with a token:
 		http://localhost:####/?token=????????????????????????????????????????????????
 
-### Random Resources
+### Potentially useful packages
+- numpy (np) - essential number crunching and transformation; found in most packages
+- pandas (pd) - extremely useful labeled tabular data processor
+- cartopy (ccrs) - succeeding `basemap` for geographic map projections
+- holoviews (hv) - high level plotting API on top of `matplotlib` and `bokeh`
+- geoviews (gv) - high level plotting API on top of `holoviews` for geographical maps
+- datashader - big data plotter, capable of handling millions of data points
+- dask - scalable, multiprocessing and easy to use wrapper
+- xarray - multidimensional data structure processor bult on top of `netCDF4` and `pandas`
+- geopandas - GIS processor built on top of `fiona`, `pandas`, and `shapely`
+- matplotlib (plt) - old fashion, but robust, data plotter
+- bokeh - low level interactive data plotter
+- scikit-learn - machine learning for regression, classification, clustering
+- keras - high level deep learning API on top of `tensorflow` and `theano`
+- metpy - collection of tools for meteorology
+
+### Demonstration topics
+See some of these packages demonstrated [here!]: https://github.com/ahuang11/random_examples.pdf
+- Why not jet
+- Read csv
+- High level plotting
+- Interactive plotting
+- Read unformatted tables
+- Read netcdf
+- Get climatology
+- Get daily anaomalies
+- Interactive map
+- Read grib
+- Read plain binary / flatfiles
+- Read shapefile
+- Geographical maps
+
+### `pip install` vs `conda install`
+- `pip install` runs much quicker than than `conda install`
+- `pip install` works best for standalone packages that do need to be compiled
+- `conda install` is useful with packages that require compiling (e.g. cartopy, gdal)
+- In most cases, follow the `Installation Instructions` page from documentation
+- Or just try doing `pip install packagename`
+- If that fails, `conda install packagename` or `conda install -c conda-forge packagename`
+
+### Additional Resources
 
 For those who need grib
 
 	conda create --name py3 --channel conda-forge/label/dev python=3.6 xarray pynio
 	source activate py3
 
+For a wonderfully written data science handbook
+
+https://jakevdp.github.io/PythonDataScienceHandbook/
+
+For standard Python styling guidelines
+
+https://www.python.org/dev/peps/pep-0008/
