@@ -2,7 +2,7 @@
 Get started with Python
 
 ### How to install Anaconda Python for Linux to your home directory
-![Video tutorial for Mac](https://www.unidata.ucar.edu/blogs/developer/entry/metpy-mondays-1-conda-installation)
+[Video tutorial for Mac](https://www.unidata.ucar.edu/blogs/developer/entry/metpy-mondays-1-conda-installation)
 
 Download Anaconda Python 3.6 (if you need 2.7, still install 3.6) to your home directory
 
@@ -143,4 +143,4 @@ Here's my setup:
 Ideas for personalizing:
 - Set up your favorite keyboard shortcuts (like ctrl + v for pasting in terminal)
 - Write aliases for common commands (see my [.bash_profile](https://github.com/ahuang11/gogopy/blob/master/.bash_profile))
-- Configure settings (see my [.screenrc](https://github.com/ahuang11/gogopy/blob/master/.screenrc)) and [ipython_config.py](https://github.com/ahuang11/gogopy/blob/master/ipython_config.py)))
+- Configure settings (see my [.screenrc](https://github.com/ahuang11/gogopy/blob/master/.screenrc) and [ipython_config.py](https://github.com/ahuang11/gogopy/blob/master/ipython_config.py))
