@@ -2,7 +2,7 @@
 Get started with Python
 
 ### How to install Anaconda Python for Linux to your home directory
-![Video tutorial for Mac](https://github.com/ahuang11/gogopy/blob/master/putty_config.png)
+![Video tutorial for Mac](https://www.unidata.ucar.edu/blogs/developer/entry/metpy-mondays-1-conda-installation)
 
 Download Anaconda Python 3.6 (if you need 2.7, still install 3.6) to your home directory
 
@@ -47,7 +47,7 @@ For your convenience, add a shortcut called "jupy" to your ~/.bash_profile to ac
 
 Port forwarding with Putty to access remote server's Jupyter notebook on local browser
 
-![Port Forwarding in Putty](https://github.com/ahuang11/gogopy/blob/master/putty_config.png "Port Forwarding in Putty")
+![Port Forwarding in Putty](https://github.com/ahuang11/gogopy/blob/master/resources/putty_config.png "Port Forwarding in Putty")
 
 1. If you use putty, before connecting to the session, on the left, follow these tabs
 
@@ -132,3 +132,15 @@ For those who need grib
 
     conda create --name py3 --channel conda-forge/label/dev python=3.6 xarray pynio
     source activate py3
+
+My philosophy: personalize your setup; it'll make coding that much more enjoyable!
+
+Here's my setup:
+Jupyter notebook (interactive prototyping
+Sublime Text 3 (production code scripting; [demonstration GIF](https://www.sublimetext.com/))
+MobaXterm (side by side SSH and WinSCP and tabs)
+
+Ideas for personalizing:
+Set up your favorite keyboard shortcuts (like ctrl + v for pasting in terminal)
+Write aliases for common commands (see my [.bash_profile](https://github.com/ahuang11/gogopy/blob/master/.bash_profile))
+Configure settings (see my [.screenrc](https://github.com/ahuang11/gogopy/blob/master/.screenrc)) and [ipython_config.py](https://github.com/ahuang11/gogopy/blob/master/ipython_config.py)))

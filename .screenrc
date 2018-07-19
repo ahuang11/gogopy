@@ -1,0 +1,10 @@
+# Don't display the copyright page
+startup_message off
+
+# tab-completion flash in heading bar
+vbell off
+
+# keep scrollback n lines
+defscrollback 1000
+
+altscreen on
