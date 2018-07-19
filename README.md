@@ -45,6 +45,8 @@ For your convenience, add a shortcut called "jupy" to your ~/.bash_profile to ac
     echo 'alias jupy=jupyter notebook --no-server --port=####' >> ~/.bash_profile
 
 
+Port forwarding with Putty to access remote server's Jupyter notebook on local browser
+
 ![Port Forwarding in Putty](https://github.com/ahuang11/gogopy/blob/master/putty_config.png "Port Forwarding in Putty")
 
 1. If you use putty, before connecting to the session, on the left, follow these tabs
@@ -69,7 +71,7 @@ For your convenience, add a shortcut called "jupy" to your ~/.bash_profile to ac
 
 7. Click the corresponding saved sesssion, and press Save so you don't have to repeat!
 
-Now in your browser input the URL that jupyter notebook --no-browser --port=#### displayed and you have access!
+Now in your browser input the URL that `jupyter notebook --no-browser --port=####` displayed and you have access!
 
 	Copy/paste this URL into your browser when you connect for the first time,
 	    to login with a token:
