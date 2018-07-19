@@ -8,5 +8,6 @@ c.InteractiveShell.ast_node_interactivity = "all"
 c.InteractiveShellApp.matplotlib = "inline"
 
 c.InteractiveShellApp.exec_lines = [
-    'from IPython.display import FileLinks as jls'
+    'from IPython.display import FileLinks'
+    'def lsz(): return FileLinks('.')'
 ]
