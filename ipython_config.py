@@ -9,5 +9,5 @@ c.InteractiveShellApp.matplotlib = "inline"
 
 c.InteractiveShellApp.exec_lines = [
     'from IPython.display import FileLinks'
-    'def lsz(): return FileLinks('.')'
+    'def lsz(): return FileLinks(".")'
 ]
