@@ -1,6 +1,9 @@
 # show directory and timestamp next to command line
 PS1='[@\h] \D{%Y-%m-%d} \A \w: ';
 
+# call my local Python distribution
+export PATH="$HOME/anaconda3/bin:$PATH"
+
 alias l='ls'
 alias f='git fetch'
 alias s='git status'
