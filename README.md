@@ -128,6 +128,11 @@ For standard Python styling guidelines
 
 https://www.python.org/dev/peps/pep-0008/
 
+Useful Jupyter magic
+
+    %timeit
+    %load some_file.py
+
 For those who need grib
 
     conda create --name py3 --channel conda-forge/label/dev python=3.6 xarray pynio
