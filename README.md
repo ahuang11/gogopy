@@ -112,8 +112,8 @@ See some of these packages demonstrated [here!](https://github.com/ahuang11/gogo
 
 #### `pip install` vs `conda install`
 - `pip install` runs much quicker than than `conda install`
-- `pip install` works best for standalone packages that do need to be compiled
-- `conda install` is useful with packages that require compiling (e.g. cartopy, gdal)
+- `pip install` works best for standalone packages that doesn't require complex compiling
+- `conda install` is useful with packages that require complex compiling (e.g. cartopy, gdal)
 - In most cases, follow the `Installation Instructions` page from documentation
 - Or just try doing `pip install packagename`
 - If that fails, `conda install packagename` or `conda install -c conda-forge packagename`
