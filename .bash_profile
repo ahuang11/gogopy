@@ -14,10 +14,13 @@ alias sbash='source ~/.bash_profile'
 alias jupy='jupyter notebook --port=#### --no-browser'
 alias timeit='python -m cProfile -o'
 
+# for working with notebooks on a compute node
+# alias sshb='ssh -L ####:<NODE>:#### <IP>'
+# alias jupyb='jupyter notebook --no-browser --ip "*"'
+
 # uploading package to pip
 # alias pyup='python setup.py sdist upload'
 
 # for windows subsystem linux
 # alias subl='/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe'
 # alias e="explorer.exe $pwd"
-
