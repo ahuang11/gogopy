@@ -142,6 +142,11 @@ Add Jupyter extensions
 
     conda install -c conda-forge jupyter_contrib_nbextensions
 
+Make Jupyter cell width take up whole screen
+
+    from IPython.core.display import display, HTML
+    display(HTML("<style>.container { width:100% !important; }</style>"))
+
 For those who need grib
 
     conda create --name pynio --channel conda-forge/label/dev python=3.6 xarray pynio
