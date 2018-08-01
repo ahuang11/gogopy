@@ -29,7 +29,7 @@
             "code" : [
                 "!mkdir $(jupyter --data-dir)/nbextensions",
                 "!mkdir $(jupyter --data-dir)/nbextensions/snippets/",
-                "!touch $(jupyter --data-dir)/nbextensions/snippets/snippets.json"
+                "!touch $(jupyter --data-dir)/nbextensions/snippets/snippets.json",
                 "# full path $(jupyter --data-dir)/nbextensions/snippets/snippets.json"
            ]
         },
