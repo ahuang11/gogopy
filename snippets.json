@@ -27,7 +27,7 @@
         {
             "name" : "add_new",
             "code" : [
-                # $(jupyter --data-dir)/nbextensions/snippets/snippets.json
+                "# $(jupyter --data-dir)/nbextensions/snippets/snippets.json"
            ]
         },
     ]
