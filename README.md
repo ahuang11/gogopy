@@ -133,10 +133,19 @@ Useful Jupyter magic
     %timeit
     %load some_file.py
 
+Make Jupyter notebook aware of other virtual environments
+    
+    source activate some_environment
+    conda install nb_conda
+
+Add Jupyter extensions
+
+    conda install -c conda-forge jupyter_contrib_nbextensions
+
 For those who need grib
 
-    conda create --name py3 --channel conda-forge/label/dev python=3.6 xarray pynio
-    source activate py3
+    conda create --name pynio --channel conda-forge/label/dev python=3.6 xarray pynio
+    source activate pynio
 
 My philosophy: personalize your setup; it'll make coding that much more enjoyable!
 
