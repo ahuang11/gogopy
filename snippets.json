@@ -24,6 +24,13 @@
            ]
         },
         {
+            "name" : "expand_cell",
+            "code" : [
+                "from IPython.core.display import display, HTML",
+                "display(HTML('<style>.container { width:100% !important; }</style>'))"
+            ]
+        },
+        {
             "name" : "make_directories",
             "code" : [
                 "!mkdir $(jupyter --data-dir)/nbextensions",
@@ -31,6 +38,6 @@
                 "!touch $(jupyter --data-dir)/nbextensions/snippets/snippets.json",
                 "# full path $(jupyter --data-dir)/nbextensions/snippets/snippets.json"
            ]
-        },
+        }
     ]
 }
