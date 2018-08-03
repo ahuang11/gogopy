@@ -39,7 +39,7 @@ echo 'export PATH=$HOME/miniconda3/bin:$PATH' >> $profile
 printf "Added alias 'gogopy' in profile.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
-conda create -n py2 python=2.7 -y
+conda create -n test python=2.7 -y
 conda install --name py2 jinja2 numpy -y
 printf "Created 'py2' Python 2 environment.\n\n"
 
