@@ -5,6 +5,7 @@ Get started with Python
 
 ### You can now install by script!
 `wget https://raw.githubusercontent.com/ahuang11/gogopy/master/gogopy.sh`
+
 `bash gogopy.sh`
 
 ### Instructions to do it manually
