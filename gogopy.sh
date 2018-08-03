@@ -31,6 +31,7 @@ $conda upgrade conda -y
 printf "Conda upgrade complete.\n\n"
 
 echo Installing most of the packages you need.
+$conda install -c conda-forge jupyter_contrib_nbextensions
 $conda install -c conda-forge cartopy -y
 $conda install -c conda-forge esmpy -y
 $pip install -U pip
