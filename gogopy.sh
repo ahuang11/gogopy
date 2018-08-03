@@ -2,7 +2,7 @@
 
 echo Hello, welcome to gogopy, a quick Python setup tool.
 echo Please pick a number between 7000 and 8000.
-echo It will be used as your notebook port number!
+printf "It will be used as your notebook port number:\n"
 
 read port
 
