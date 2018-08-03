@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 profile=~/.bash_profile
+conda=$HOME/miniconda3/bin/conda
 
 echo Hello, welcome to gogopy, a quick Python setup tool.
 echo Please pick a number between 7000 and 8000.
@@ -19,19 +20,18 @@ echo Installing the base Python 3 environment.
 bash Miniconda3-latest-Linux-x86_64.sh -b  # run quietly
 printf "Base installation complete.\n\n"
 
-echo Exporting your conda distribution to $profile
+echo Exporting your Miniconda distribution to $profile
 printf '\n# Added by gogopy bash script.' >> $profile
 echo 'export PATH=$HOME/miniconda3/bin:$PATH' >> $profile
-source $profile
 printf "Export path complete.\n\n"
 
 echo Upgrading your Miniconda to the latest version.
-conda upgrade conda -y
+$conda upgrade conda -y
 printf "Conda upgrade complete.\n\n"
 
 echo Installing a Python 3 environment with most of the packages you need.
-wget -nc https://github.com/ahuang11/gogopy/blob/master/gogopy.yml
-conda env create -f gogopy.yml
+wget -nc https://raw.githubusercontent.com/ahuang11/gogopy/master/gogopy.yml
+$conda env create -f gogopy.yml
 printf "Created 'gogopy' Python 3 environment.\n\n"
 
 echo "alias gogopy='source activate gogopy'" >> $profile
@@ -39,8 +39,8 @@ echo 'export PATH=$HOME/miniconda3/bin:$PATH' >> $profile
 printf "Added alias 'gogopy' in profile.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
-conda create -n test python=2.7 -y
-conda install --name py2 jinja2 numpy -y
+$conda create -n test python=2.7 -y
+$conda install --name py2 jinja2 numpy -y
 printf "Created 'py2' Python 2 environment.\n\n"
 
 echo Adding alias jupy to your $profile to run Jupyter notebook.
