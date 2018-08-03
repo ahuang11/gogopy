@@ -42,7 +42,7 @@ Change the port number between 7000 and 8000, and in a terminal input the follow
 
 For your convenience, add a shortcut called "jupy" to your ~/.bash_profile to activate
 
-    	echo "alias jupy='jupyter notebook --no-server --port=####'" >> ~/.bash_profile
+    echo "alias jupy='jupyter notebook --no-server --port=####'" >> ~/.bash_profile
 
 
 Port forwarding with Putty to access remote server's Jupyter notebook on local browser
