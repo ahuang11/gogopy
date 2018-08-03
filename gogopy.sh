@@ -58,8 +58,18 @@ echo "alias jupy='jupyter notebook --no-server --port=$port'" >> $profile
 printf "Added alias 'jupy' in profile.\n\n"
 
 echo Great. Your Python distribution is almost ready to go.
-echo "How to start using Jupyter notebooks" @ https://github.com/ahuang11/gogopy
-echo will help you step by step to port forward your notebook.
+
+echo Configuring Jupyter notebook defaults
+wget https://raw.githubusercontent.com/ahuang11/gogopy/master/ipython_config.py
+mv ipython_config.py ~/.ipython/profile_default/
+mkdir $(jupyter --data-dir)/nbextensions
+mkdir $(jupyter --data-dir)/nbextensions/snippets/
+wget https://raw.githubusercontent.com/ahuang11/gogopy/master/snippets.json
+mv snippets.json $(jupyter --data-dir)/nbextensions/snippets/
+printf "Configured Jupyter notebook.\n\n"
+
+echo You need to manually setup port forwarding on Putty
+echo If you need help: https://github.com/ahuang11/gogopy
 
 echo Cleaning up installation files.
 rm Anaconda3-5.2.0-Linux-x86_64.sh
