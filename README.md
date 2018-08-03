@@ -2,6 +2,12 @@
 Get started with Python
 
 ### How to install Anaconda Python for Linux to your home directory
+
+### You can now install by script!
+`wget https://raw.githubusercontent.com/ahuang11/gogopy/master/gogopy.sh`
+`bash gogopy.sh`
+
+### Instructions to do it manually
 [Video tutorial for Mac](https://www.unidata.ucar.edu/blogs/developer/entry/metpy-mondays-1-conda-installation)
 
 Download Anaconda Python 3.6 (if you need 2.7, still install 3.6) to your home directory
@@ -134,7 +140,7 @@ Useful Jupyter magic
     %load some_file.py
 
 Make Jupyter notebook aware of other virtual environments
-    
+
     source activate some_environment
     conda install nb_conda
 

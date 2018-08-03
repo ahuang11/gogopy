@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 profile=~/.bash_profile
-conda=$HOME/miniconda3/bin/conda
+conda=$HOME/anaconda3/bin/conda
+pip=$HOME/anaconda3/bin/pip
 
 echo Hello, welcome to gogopy, a quick Python setup tool.
 echo Please pick a number between 7000 and 8000.
@@ -12,31 +13,38 @@ read port
 echo Thank you. $port_number was chosen. You can change it at $profile.
 printf "Your installation will now begin--come back in half an hour or so.\n\n"
 
-echo Begin downloading Miniconda 3, a lite version of Anaconda.
-wget -nc https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+echo Begin downloading Anaconda 3, a lite version of Anaconda.
+wget -nc https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
 printf "Download complete.\n\n"
 
 echo Installing the base Python 3 environment.
-bash Miniconda3-latest-Linux-x86_64.sh -b  # run quietly
+bash Anaconda3-5.2.0-Linux-x86_64.sh -b  # run quietly
 printf "Base installation complete.\n\n"
 
-echo Exporting your Miniconda distribution to $profile
-printf '\n# Added by gogopy bash script.' >> $profile
-echo 'export PATH=$HOME/miniconda3/bin:$PATH' >> $profile
+echo Exporting your Anaconda distribution to $profile
+printf '\n# Added by gogopy bash script.\n' >> $profile
+echo 'export PATH=$HOME/anaconda3/bin:$PATH' >> $profile
 printf "Export path complete.\n\n"
 
-echo Upgrading your Miniconda to the latest version.
+echo Upgrading your Anaconda to the latest version.
 $conda upgrade conda -y
 printf "Conda upgrade complete.\n\n"
 
-echo Installing a Python 3 environment with most of the packages you need.
-wget -nc https://raw.githubusercontent.com/ahuang11/gogopy/master/gogopy.yml
-$conda env create -f gogopy.yml
-printf "Created 'gogopy' Python 3 environment.\n\n"
-
-echo "alias gogopy='source activate gogopy'" >> $profile
-echo 'export PATH=$HOME/miniconda3/bin:$PATH' >> $profile
-printf "Added alias 'gogopy' in profile.\n\n"
+echo Installing most of the packages you need.
+$conda install -c conda-forge cartopy -y
+$conda install -c conda-forge esmpy -y
+$pip install -U pip
+$pip install -U netCDF4
+$pip install -U bokeh
+$pip install -U holoviews
+$pip install -U geoviews
+$pip install -U hvplot
+$pip install -U xarray
+$pip install -U dask
+$pip install -U xesmf
+$pip install -U geopandas
+$pip install -U holoext
+printf "Prepared Python 3 environment.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
 $conda create -n test python=2.7 -y
@@ -52,7 +60,5 @@ echo "How to start using Jupyter notebooks" @ https://github.com/ahuang11/gogopy
 echo will help you step by step to port forward your notebook.
 
 echo Cleaning up installation files.
-rm gogopy.yml
-rm Miniconda3-latest-Linux-x86_64.sh
-
-printf "All done! Remember to type 'gogopy' to activate your main environment.\n\n"
+rm Anaconda3-5.2.0-Linux-x86_64.sh
+printf "All done! Just restart your terminal or source $profile\n\n"
