@@ -13,7 +13,7 @@ read port
 echo Thank you. $port_number was chosen. You can change it at $profile.
 printf "Your installation will now begin--come back in half an hour or so.\n\n"
 
-echo Begin downloading Anaconda 3, a lite version of Anaconda.
+echo Begin downloading Anaconda 3.
 wget -nc https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
 printf "Download complete.\n\n"
 
