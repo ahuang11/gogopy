@@ -157,6 +157,7 @@ Make Jupyter cell width take up whole screen
 For those who need grib
 
     conda create --name pynio --channel conda-forge/label/dev python=3.6 xarray pynio
+    conda install gdal
     conda install libgdal
     source activate pynio
 
