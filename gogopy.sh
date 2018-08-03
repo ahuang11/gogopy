@@ -35,6 +35,7 @@ $conda install -c conda-forge nb_conda -y
 $conda install -c conda-forge jupyter_contrib_nbextensions -y
 $conda install -c conda-forge cartopy -y
 $conda install -c conda-forge esmpy -y
+$pip install -U autopep8
 $pip install -U pip
 $pip install -U netCDF4
 $pip install -U bokeh
