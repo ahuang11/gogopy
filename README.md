@@ -143,7 +143,7 @@ Useful Jupyter magic
 Make Jupyter notebook aware of other virtual environments
 
     source activate some_environment
-    conda install nb_conda
+    pip install ipykernel
 
 Add Jupyter extensions
 
