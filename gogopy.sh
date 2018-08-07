@@ -50,7 +50,7 @@ $pip install -U holoext
 printf "Prepared Python 3 environment.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
-$conda create -n test python=2.7 -y
+$conda create -n py2 python=2.7 -y
 $conda install --name py2 jinja2 numpy -y
 printf "Created 'py2' Python 2 environment.\n\n"
 
