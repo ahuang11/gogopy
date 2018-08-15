@@ -55,7 +55,7 @@ $conda install --name py2 jinja2 numpy -y
 printf "Created 'py2' Python 2 environment.\n\n"
 
 echo Adding alias jupy to your $profile to run Jupyter notebook.
-echo "alias jupy='jupyter notebook --no-server --port=$port'" >> $profile
+echo "alias jupy='jupyter notebook --no-browser --port=$port'" >> $profile
 printf "Added alias 'jupy' in profile.\n\n"
 
 echo Great. Your Python distribution is almost ready to go.
