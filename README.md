@@ -1,6 +1,10 @@
 # gogopy
 Get started with Python
 
+# credits
+All credit goes to the weather overlord chilly T for taking ahuang11 under his wing and
+letting him flourish into the beautiful coding butterfly that he is today.
+
 ### How to install Anaconda Python for Linux to your home directory
 
 ### You can now install by script!
