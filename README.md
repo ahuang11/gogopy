@@ -171,3 +171,7 @@ Ideas for personalizing:
 - Set up your favorite keyboard shortcuts (like ctrl + v for pasting in terminal)
 - Write aliases for common commands (see my [.bash_profile](https://github.com/ahuang11/gogopy/blob/master/.bash_profile))
 - Configure settings (see my [.screenrc](https://github.com/ahuang11/gogopy/blob/master/.screenrc) and [ipython_config.py](https://github.com/ahuang11/gogopy/blob/master/ipython_config.py))
+
+### Acknowledgements
+Some credits goes to the weather overlord chilly T (bill-turner) for taking ahuang11 under his wing and
+letting him flourish into the beautiful coding butterfly that he is today. :)
