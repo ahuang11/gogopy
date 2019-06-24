@@ -18,7 +18,7 @@ wget -nc https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 printf "Download complete.\n\n"
 
 echo Installing the base Python 3 environment.
-bash Anaconda3-5.2.0-Linux-x86_64.sh -b  # run quietly
+bash Anaconda3-2019.03-Linux-x86_64.sh -b  # run quietly
 printf "Base installation complete.\n\n"
 
 echo Exporting your Anaconda distribution to $profile
@@ -73,5 +73,5 @@ echo You need to manually setup port forwarding on Putty
 echo If you need help: https://github.com/ahuang11/gogopy
 
 echo Cleaning up installation files.
-rm Anaconda3-5.2.0-Linux-x86_64.sh
+rm Anaconda3-2019.03-Linux-x86_64.sh
 printf "All done! Just restart your terminal or source $profile\n\n"
