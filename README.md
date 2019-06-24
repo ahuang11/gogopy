@@ -13,7 +13,7 @@ Get started with Python
 
 Download Anaconda Python 3.6 (if you need 2.7, still install 3.6) to your home directory
 
-	wget https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+	wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 
 Bash the downloaded file to install
 
