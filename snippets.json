@@ -38,6 +38,16 @@
                 "!touch $(jupyter --data-dir)/nbextensions/snippets/snippets.json",
                 "# full path $(jupyter --data-dir)/nbextensions/snippets/snippets.json"
            ]
-        }
+        },
+        {
+            "name" : "tutorial_test",
+            "code" : [
+                "import xarray as xr",
+                "import hvplot.xarray",
+                "ds = xr.tutorial.open_dataset('air_temperature')",
+                "ds.hvplot('lon', 'lat')"
+           ]
+         }
+
     ]
 }
