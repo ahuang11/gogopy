@@ -31,7 +31,7 @@ $conda update -n base -c defaults conda -y
 printf "Conda upgrade complete.\n\n"
 
 echo Installing Jupyter extensions.
-$conda install -c conda-forge nb_conda jupyter_contrib_nbextensions
+$conda install -c conda-forge nb_conda jupyter_contrib_nbextensions -y
 $pip install -U pip
 
 echo Creating a Python 3 environment with most of the packages you need.
