@@ -46,7 +46,6 @@ $pip install -U xarray
 $pip install -U dask
 $pip install -U xesmf
 $pip install -U geopandas
-$pip install -U holoext
 printf "Prepared Python 3 environment.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
