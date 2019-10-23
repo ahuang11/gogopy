@@ -36,10 +36,9 @@ $conda install -c conda-forge nb_conda jupyter_contrib_nbextensions -y
 
 echo Creating a Python 3 environment with most of the packages you need.
 $conda create -n py3 python=3.7 -y
-$conda install --name py3 -c conda-forge cartopy esmpy -y
-$conda install --name py3 -c pyviz holoviews geoviews hvplot datashader -y
+$conda install --name py3 -c conda-forge cartopy esmpy datashader
 $pip install -U pip
-$pip install -U autopep8 netCDF4 h5py xarray dask ipykernel ipywidgets xesmf
+$pip install -U autopep8 netCDF4 h5py xarray dask ipykernel ipywidgets xesmf holoviews geoviews hvplot
 printf "Prepared 'py3' Python 3 environment.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
