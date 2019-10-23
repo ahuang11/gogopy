@@ -31,9 +31,9 @@ $conda update -n base -c defaults conda -y
 printf "Conda upgrade complete.\n\n"
 
 echo Installing most of the packages you need.
-$conda install -c conda-forge nb_conda jupyter_contrib_nbextensions cartopy esmpy -y
-$conda install -c pyviz holoviews geoviews hvplot datashader
-$pip install -U pip autopep8 netCDF4 xarray dask xesmf geopandas
+$conda install -c conda-forge nb_conda jupyter_contrib_nbextensions cartopy esmpy geopandas -y
+$conda install -c pyviz holoviews geoviews hvplot datashader -y
+$pip install -U pip autopep8 netCDF4 h5py xarray dask xesmf
 printf "Prepared Python 3 environment.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
