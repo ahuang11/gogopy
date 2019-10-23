@@ -30,11 +30,18 @@ echo Upgrading your Anaconda to the latest version.
 $conda update -n base -c defaults conda -y
 printf "Conda upgrade complete.\n\n"
 
-echo Installing most of the packages you need.
-$conda install -c conda-forge nb_conda jupyter_contrib_nbextensions cartopy esmpy geopandas -y
+echo Installing Jupyter extensions.
+$conda install -c conda-forge nb_conda jupyter_contrib_nbextensions
+$pip install -U pip
+
+echo Creating a Python 3 environment with most of the packages you need.
+$conda create -n py3 python=3.7 -y
+$conda activate py3
+$conda install -c conda-forge cartopy ecmwf geopandas -y
 $conda install -c pyviz holoviews geoviews hvplot datashader -y
-$pip install -U pip autopep8 netCDF4 h5py xarray dask xesmf
-printf "Prepared Python 3 environment.\n\n"
+$pip install -U autopep8 netCDF4 h5py xarray dask xesmf ipykernel ipywidgets
+$conda deactivate
+printf "Prepared 'py3' Python 3 environment.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
 $conda create -n py2 python=2.7 -y
