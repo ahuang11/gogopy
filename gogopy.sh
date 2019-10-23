@@ -27,6 +27,7 @@ echo 'export PATH=$HOME/anaconda3/bin:$PATH' >> $profile
 printf "Export path complete.\n\n"
 
 echo Upgrading your Anaconda to the latest version.
+$conda init bash
 $conda update -n base -c defaults conda -y
 printf "Conda upgrade complete.\n\n"
 
@@ -36,12 +37,11 @@ $pip install -U pip
 
 echo Creating a Python 3 environment with most of the packages you need.
 $conda create -n py3 python=3.7 -y
-$conda init bash
-$conda activate py3
+source activate py3
 $conda install -c conda-forge cartopy ecmwf geopandas -y
 $conda install -c pyviz holoviews geoviews hvplot datashader -y
 $pip install -U autopep8 netCDF4 h5py xarray dask xesmf ipykernel ipywidgets
-$conda deactivate
+source deactivate
 printf "Prepared 'py3' Python 3 environment.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
