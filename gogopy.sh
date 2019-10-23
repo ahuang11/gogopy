@@ -54,6 +54,7 @@ echo Great. Your Python distribution is almost ready to go.
 
 echo Configuring Jupyter notebook defaults
 wget https://raw.githubusercontent.com/ahuang11/gogopy/master/ipython_config.py
+mkdir ~/.ipython/profile_default/
 mv ipython_config.py ~/.ipython/profile_default/
 mkdir $(jupyter --data-dir)/nbextensions
 mkdir $(jupyter --data-dir)/nbextensions/snippets/
