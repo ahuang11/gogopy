@@ -2,7 +2,7 @@
 
 profile=~/.bash_profile
 conda=$HOME/anaconda3/bin/conda
-pip=$HOME/anaconda3/envs/py3/bin
+pip=$HOME/anaconda3/envs/py3/bin/pip
 
 echo Hello, welcome to gogopy, a quick Python setup tool.
 echo Please pick a number between 7000 and 8000.
@@ -39,8 +39,7 @@ $conda create -n py3 python=3.7 -y
 $conda install --name py3 -c conda-forge cartopy esmpy -y
 $conda install --name py3 -c pyviz holoviews geoviews hvplot datashader -y
 $pip install -U pip
-$pip install -U autopep8 netCDF4 h5py xarray dask ipykernel ipywidgets
-$pip install -U xesmf
+$pip install -U autopep8 netCDF4 h5py xarray dask ipykernel ipywidgets xesmf
 printf "Prepared 'py3' Python 3 environment.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
