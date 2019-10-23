@@ -36,6 +36,7 @@ $pip install -U pip
 
 echo Creating a Python 3 environment with most of the packages you need.
 $conda create -n py3 python=3.7 -y
+$conda init bash
 $conda activate py3
 $conda install -c conda-forge cartopy ecmwf geopandas -y
 $conda install -c pyviz holoviews geoviews hvplot datashader -y
