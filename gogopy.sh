@@ -3,6 +3,7 @@
 profile=~/.bash_profile
 conda=$HOME/anaconda3/bin/conda
 pip=$HOME/anaconda3/envs/py3/bin/pip
+anaconda=Anaconda3-2019.10-Linux-x86_64.sh
 
 echo Hello, welcome to gogopy, a quick Python setup tool.
 echo Please pick a number between 7000 and 8000.
@@ -14,11 +15,11 @@ echo Thank you. $port_number was chosen. You can change it at $profile.
 printf "Your installation will now begin--come back in half an hour or so.\n\n"
 
 echo Begin downloading Anaconda 3.
-wget -nc https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+wget -nc https://repo.anaconda.com/archive/$anaconda
 printf "Download complete.\n\n"
 
 echo Installing the base Python 3 environment.
-bash Anaconda3-2019.10-Linux-x86_64.sh -b  # run quietly
+bash $anaconda -b  # run quietly
 printf "Base installation complete.\n\n"
 
 echo Exporting your Anaconda distribution to $profile
@@ -66,5 +67,5 @@ echo You need to manually setup port forwarding on Putty
 echo If you need help: https://github.com/ahuang11/gogopy
 
 echo Cleaning up installation files.
-rm Anaconda3-2019.10-Linux-x86_64.sh
+rm $anaconda
 printf "All done! Just restart your terminal or source $profile\n\n"
