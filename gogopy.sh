@@ -68,4 +68,4 @@ echo If you need help: https://github.com/ahuang11/gogopy
 
 echo Cleaning up installation files.
 rm $anaconda
-printf "All done! Just restart your terminal or source $profile\n\n"
+printf "All done! Just restart your terminal or source $profile and don't forget to `source activate py3` before using!\n\n"
