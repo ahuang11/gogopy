@@ -3,7 +3,7 @@
 profile=~/.bash_profile
 conda=$HOME/anaconda3/bin/conda
 pip=$HOME/anaconda3/envs/py3/bin/pip
-anaconda=Anaconda3-2020.02-Linux-x86_64.sh
+anaconda=Anaconda3-2020.07-Linux-x86_64.sh
 
 echo Hello, welcome to gogopy, a quick Python setup tool.
 echo Please pick a number between 7000 and 8000.
