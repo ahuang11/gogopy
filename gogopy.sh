@@ -35,11 +35,8 @@ jupyter labextension install dask-labextension
 jupyter serverextension enable dask_labextension
 printf "Conda upgrade complete.\n\n"
 
-echo Installing Jupyter extensions.
-$conda install -c conda-forge nb_conda jupyter_contrib_nbextensions -y
-
 echo Creating a Python 3 environment with most of the packages you need.
-$conda create -n py3 python=3.7 -y
+$conda create -n py3 python=3.8 -y
 $conda install --name py3 -c conda-forge cartopy esmpy datashader -y
 $pip install -U pip
 $pip install -U autopep8 netCDF4 h5py xarray dask ipykernel ipywidgets xesmf holoviews geoviews hvplot panel
@@ -60,10 +57,7 @@ echo Configuring Jupyter notebook defaults
 wget https://raw.githubusercontent.com/ahuang11/gogopy/master/ipython_config.py
 mkdir ~/.ipython/profile_default/
 mv ipython_config.py ~/.ipython/profile_default/
-mkdir $(jupyter --data-dir)/nbextensions
-mkdir $(jupyter --data-dir)/nbextensions/snippets/
 wget https://raw.githubusercontent.com/ahuang11/gogopy/master/snippets.json
-mv snippets.json $(jupyter --data-dir)/nbextensions/snippets/
 printf "Configured Jupyter notebook.\n\n"
 
 echo You need to manually setup port forwarding on Putty
