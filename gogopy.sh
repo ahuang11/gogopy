@@ -29,15 +29,14 @@ printf "Export path complete.\n\n"
 
 echo Upgrading your Anaconda to the latest version.
 $conda init bash
-$conda update -n base -c conda-forge conda -y
-$conda install -n base -c conda-forge dask-labextension
-jupyter labextension install dask-labextension
-jupyter serverextension enable dask_labextension
+$conda update -n base -c defaults conda -y
 printf "Conda upgrade complete.\n\n"
 
 echo Creating a Python 3 environment with most of the packages you need.
 $conda create -n py3 python=3.8 -y
-$conda install --name py3 -c conda-forge cartopy esmpy datashader -y
+$conda install --name py3 -c conda-forge cartopy esmpy datashader nodejs dask-labextension -y
+jupyter labextension install dask-labextension
+jupyter serverextension enable dask_labextension
 $pip install -U pip
 $pip install -U autopep8 netCDF4 h5py xarray dask ipykernel ipywidgets xesmf holoviews geoviews hvplot panel
 printf "Prepared 'py3' Python 3 environment.\n\n"
