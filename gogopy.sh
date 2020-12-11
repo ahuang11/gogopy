@@ -34,7 +34,7 @@ printf "Conda upgrade complete.\n\n"
 
 echo Creating a Python 3 environment with most of the packages you need.
 $conda create -n py3 python=3.8 -y
-$conda install --name py3 -c conda-forge cartopy esmpy datashader nodejs dask-labextension -y
+$conda install --name py3 -c conda-forge cartopy esmpy datashader jupyter nodejs dask-labextension -y
 jupyter labextension install dask-labextension
 jupyter serverextension enable dask_labextension
 $pip install -U pip
