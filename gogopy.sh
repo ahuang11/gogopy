@@ -47,15 +47,6 @@ echo Adding alias jupy to your $profile to run Jupyter notebook.
 echo "alias jupy='jupyter lab --no-browser --port=$port'" >> $profile
 printf "Added alias 'jupy' in profile.\n\n"
 
-echo Great. Your Python distribution is almost ready to go.
-
-echo Configuring Jupyter notebook defaults
-wget https://raw.githubusercontent.com/ahuang11/gogopy/master/ipython_config.py
-mkdir ~/.ipython/profile_default/
-mv ipython_config.py ~/.ipython/profile_default/
-wget https://raw.githubusercontent.com/ahuang11/gogopy/master/snippets.json
-printf "Configured Jupyter notebook.\n\n"
-
 echo You need to manually setup port forwarding on Putty
 echo If you need help: https://github.com/ahuang11/gogopy
 
