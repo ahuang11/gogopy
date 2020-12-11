@@ -38,7 +38,7 @@ $conda install --name py3 -c conda-forge cartopy esmpy datashader jupyter nodejs
 jupyter labextension install dask-labextension
 jupyter serverextension enable dask_labextension
 $pip install -U pip
-$pip install -U autopep8 netCDF4 h5py xarray dask ipykernel ipywidgets xesmf holoviews geoviews hvplot panel
+$pip install -U autopep8 netCDF4 h5py xarray dask xesmf holoviews geoviews hvplot panel
 printf "Prepared 'py3' Python 3 environment.\n\n"
 
 echo Creating a Python 2 environment with bare minimum.
