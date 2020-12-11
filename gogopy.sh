@@ -43,11 +43,6 @@ $pip install -U pip
 $pip install -U autopep8 netCDF4 h5py xarray dask xesmf holoviews geoviews hvplot panel
 printf "Prepared 'py3' Python 3 environment.\n\n"
 
-echo Creating a Python 2 environment with bare minimum.
-$conda create -n py2 python=2.7 -y
-$conda install --name py2 jinja2 numpy -y
-printf "Created 'py2' Python 2 environment.\n\n"
-
 echo Adding alias jupy to your $profile to run Jupyter notebook.
 echo "alias jupy='jupyter lab --no-browser --port=$port'" >> $profile
 printf "Added alias 'jupy' in profile.\n\n"
