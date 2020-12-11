@@ -30,8 +30,8 @@ printf "Export path complete.\n\n"
 echo Upgrading your Anaconda to the latest version.
 $conda init bash
 $conda update -n base -c defaults conda -y
-$conda install -n base -c conda-forge jupyterlab nb_conda_kernels
-$conda install -n base -c conda-forge nodejs dask-labextension
+$conda install -n base -c conda-forge jupyterlab nb_conda_kernels -y
+$conda install -n base -c conda-forge nodejs dask-labextension -y
 jupyter labextension install dask-labextension
 jupyter serverextension enable dask_labextension
 printf "Conda upgrade complete.\n\n"
