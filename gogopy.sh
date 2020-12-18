@@ -39,9 +39,9 @@ printf "Conda upgrade complete.\n\n"
 
 echo Creating a Python 3 environment with most of the packages you need.
 $conda create -n py3 python=3.8 -y
-$conda install --name py3 -c conda-forge cartopy esmpy datashader ipykernel -y
+$conda install --name py3 -c conda-forge cartopy xesmf=0.5.0 esmpy=8.0.0 datashader ipykernel -y
 $pip install -U pip
-$pip install -U autopep8 netCDF4 h5py xarray dask xesmf holoviews geoviews hvplot panel
+$pip install -U autopep8 netCDF4 h5py dask holoviews geoviews hvplot panel
 printf "Prepared 'py3' Python 3 environment.\n\n"
 
 echo Adding alias jupy to your $profile to run Jupyter notebook.
