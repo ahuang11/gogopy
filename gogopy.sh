@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 profile=~/.bash_profile
 conda=$HOME/anaconda3/bin/conda
 pip=$HOME/anaconda3/envs/py3/bin/pip
@@ -30,23 +28,33 @@ printf "Export path complete.\n\n"
 echo Upgrading your Anaconda to the latest version.
 $conda init bash
 $conda update -n base -c defaults conda -y
-$conda install -n base nodejs -y
-$conda install -n base -c conda-forge jupyterlab nb_conda_kernels -y
-$conda install -n base -c conda-forge dask-labextension -y
-jupyter labextension install dask-labextension
-jupyter serverextension enable dask_labextension
 printf "Conda upgrade complete.\n\n"
 
+echo Installing Jupyter extensions.
+$conda install -c conda-forge nb_conda jupyter_contrib_nbextensions -y
+
 echo Creating a Python 3 environment with most of the packages you need.
-$conda create -n py3 python=3.8 -y
-$conda install --name py3 -c conda-forge cartopy xesmf=0.5.0 esmpy=8.0.0 datashader ipykernel -y
+$conda create -n py3 python=3.7 -y
+$conda install --name py3 -c conda-forge cartopy esmpy datashader -y
 $pip install -U pip
-$pip install -U autopep8 netCDF4 h5py dask holoviews geoviews hvplot panel
+$pip install -U autopep8 netCDF4 h5py xarray dask ipykernel ipywidgets xesmf holoviews geoviews hvplot panel
 printf "Prepared 'py3' Python 3 environment.\n\n"
 
 echo Adding alias jupy to your $profile to run Jupyter notebook.
-echo "alias jupy='jupyter lab --no-browser --port=$port'" >> $profile
+echo "alias jupy='jupyter notebook --no-browser --port=$port'" >> $profile
 printf "Added alias 'jupy' in profile.\n\n"
+
+echo Great. Your Python distribution is almost ready to go.
+
+echo Configuring Jupyter notebook defaults
+wget https://raw.githubusercontent.com/ahuang11/gogopy/master/ipython_config.py
+mkdir ~/.ipython/profile_default/
+mv ipython_config.py ~/.ipython/profile_default/
+mkdir $(jupyter --data-dir)/nbextensions
+mkdir $(jupyter --data-dir)/nbextensions/snippets/
+wget https://raw.githubusercontent.com/ahuang11/gogopy/master/snippets.json
+mv snippets.json $(jupyter --data-dir)/nbextensions/snippets/
+printf "Configured Jupyter notebook.\n\n"
 
 echo You need to manually setup port forwarding on Putty
 echo If you need help: https://github.com/ahuang11/gogopy
