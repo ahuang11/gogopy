@@ -11,7 +11,7 @@ alias untar='tar -xvzf'
 alias py2='source activate py2'
 alias ebash='nano ~/.bash_profile'
 alias sbash='source ~/.bash_profile'
-alias jupy='jupyter notebook --port=#### --no-browser'
+alias nano='vi'
 alias timeit='python -m cProfile -o'
 
 # for working with notebooks on a compute node
