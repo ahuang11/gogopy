@@ -1,18 +1,13 @@
 # show directory and timestamp next to command line
 PS1='[@\h] \D{%Y-%m-%d} \A \w: ';
 
-# call my local Python distribution
-export PATH="$HOME/anaconda3/bin:$PATH"
-
 alias l='ls'
 alias f='git fetch'
 alias s='git status'
 alias untar='tar -xvzf'
-alias py2='source activate py2'
 alias ebash='nano ~/.bash_profile'
 alias sbash='source ~/.bash_profile'
 alias nano='vi'
-alias timeit='python -m cProfile -o'
 
 # for working with notebooks on a compute node
 # alias sshb='ssh -L ####:<NODE>:#### <IP>'
@@ -22,5 +17,19 @@ alias timeit='python -m cProfile -o'
 # alias pyup='python setup.py sdist upload'
 
 # for windows subsystem linux
-# alias subl='/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe'
+# alias sb='/mnt/c/Program\ Files/Sublime\ Text\ 3/subl.exe'
 # alias e="explorer.exe $pwd"
+
+# for conda activate to work
+conda_base="dirname ~/anaconda3/bin/conda"
+__conda_setup="$('$conda_base/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$conda_base/etc/profile.d/conda.sh" ]; then
+        . "$conda_base/etc/profile.d/conda.sh"
+    else
+        export PATH="$conda_base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
