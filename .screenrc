@@ -12,3 +12,6 @@ altscreen on
 
 # source ~/.bash_profile
 shell -$SHELL
+
+# Enable mouse scrolling and scroll bar history scrolling
+termcapinfo xterm* ti@:te@
