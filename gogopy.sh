@@ -35,7 +35,7 @@ $mamba install -n base jupyter nb_conda_kernels nodejs -y
 printf "Conda upgrade complete.\n\n"
 
 echo Creating a Python 3 environment with most of the packages you need.
-$mamba create -n py3 python=3.10 -y
+$mamba create -n py3 python=3.8 -y
 $mamba install -n py3 cartopy xesmf datashader ipykernel -y
 $pip install -U pip
 $pip install -U autopep8 netCDF4 xarray dask holoviews geoviews hvplot panel
