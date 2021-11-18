@@ -29,15 +29,16 @@ echo 'export PATH=$HOME/miniforge3/bin:$PATH' >> $profile
 printf "Export path complete.\n\n"
 
 echo Upgrading your miniforge to the latest version.
-$mamba init bash
+$conda init bash
+$conda install -n base mamba -y
 $mamba install -n base jupyter nb_conda_kernels nodejs -y
 printf "Conda upgrade complete.\n\n"
 
 echo Creating a Python 3 environment with most of the packages you need.
 $mamba create -n py3 python=3.10 -y
-$mamba install --name py3 cartopy xesmf datashader ipykernel -y
+$mamba install -n py3 cartopy xesmf datashader ipykernel -y
 $pip install -U pip
-$pip install -U autopep8 netCDF4 h5py xarray dask holoviews geoviews hvplot panel
+$pip install -U autopep8 netCDF4 xarray dask holoviews geoviews hvplot panel
 printf "Prepared 'py3' Python 3 environment.\n\n"
 
 echo Adding alias jupy to your $profile to run Jupyter notebook.
