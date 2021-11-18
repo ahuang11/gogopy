@@ -21,7 +21,7 @@ alias nano='vi'
 # alias e="explorer.exe $pwd"
 
 # for conda activate to work
-conda_base="dirname ~/anaconda3/bin/conda"
+conda_base="dirname ~/miniforge3/bin/conda"
 __conda_setup="$('$conda_base/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
