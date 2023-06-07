@@ -1,6 +1,8 @@
 # show directory and timestamp next to command line
 PS1='[@\h] \D{%Y-%m-%d} \A \w: ';
 
+alias new='conda create python=3.10 -n'
+alias bye='conda deactivate'
 alias l='ls'
 alias f='git fetch'
 alias s='git status'
